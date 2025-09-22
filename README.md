@@ -3,7 +3,7 @@ iguano power
  <!DOCTYPE html>
 <html>
 <head>
-  <title>Hola Mundo</title>
+  Hola Mundo
 </head>
 <body>
   <h1>Hola mundo</h1>
