@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portal de Películas</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #0f172a; background: #f6f7fb; }
+        .container { max-width: 1100px; margin: 28px auto; padding: 18px; }
+
+        /* --- ESTILOS DE CABECERA Y NAVEGACIÓN --- */
+        header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+        .brand { display: flex; gap: 10px; align-items: center; }
+        .logo { width: 44px; height: 44px; border-radius: 6px; background: linear-gradient(135deg, #ff5f6d, #ffc371); display: grid; place-items: center; color: #fff; font-weight: 700; }
+        nav ul { list-style: none; display: flex; gap: 10px; align-items: center; }
+        nav a { text-decoration: none; padding: 8px 12px; border-radius: 8px; color: #0f172a; font-weight: 600; }
+        nav a:hover { background: #e8eef9; }
+        .search-and-profile { display: flex; align-items: center; gap: 12px; }
+        .searchbar input[type="search"] { padding: 10px 12px; border-radius: 8px; border: 1px solid #dbe7ff; }
+        .profile-btn { text-decoration: none; padding: 10px 14px; border-radius: 8px; background: #2563eb; color: white; font-weight: 600; }
+        .profile-btn:hover { opacity: 0.95; }
+
+        /* --- ESTILOS DEL CARRUSEL --- */
+        .carousel-container {
+            position: relative;
+            max-width: 100%; /* El contenedor puede expandirse más */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(12, 14, 20, 0.04);
+            background: #fff;
+            padding: 10px; /* Añadir padding al contenedor para que las tarjetas interiores no toquen los bordes */
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            margin-left: -10px; /* Compensar el padding izquierdo del contenedor */
+            margin-right: -10px; /* Compensar el padding derecho del contenedor */
+        }
+        
+        .card {
+            flex: 0 0 calc(25% - 14px); /* Ancho de 25% menos el espacio para el gap */
+            margin: 0 7px; /* Medio gap a cada lado de la tarjeta para simular un gap de 14px */
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .card .body { padding: 10px 0; }
+        .card h3 { font-size: 16px; margin-bottom: 5px; }
+        .card p { font-size: 13px; color: #475569; }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+        
+        .carousel-button.prev { left: 10px; }
+        .carousel-button.next { right: 10px; }
+
+        /* --- ESTILOS DE PIE DE PÁGINA --- */
+        footer { margin-top: 18px; padding: 18px; text-align: center; color: #475569; font-size: 13px; background: #fff; border-radius: 10px; box-shadow: 0 6px 18px rgba(12, 14, 20, 0.04); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .card {
+                flex: 0 0 calc(33.33% - 14px); /* 3 tarjetas por fila en tabletas */
+            }
+        }
+
+        @media (max-width: 640px) {
+            header { flex-wrap: wrap; justify-content: center; }
+            nav, .search-and-profile { width: 100%; justify-content: center; }
+            .carousel-button { font-size: 1.2em; padding: 10px 5px; }
+            .card {
+                flex: 0 0 calc(50% - 14px); /* 2 tarjetas por fila en móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">PM</div>
+                <div>
+                    <div style="font-weight:700">Portal de Películas</div>
+                    <div style="font-size:12px;color:#64748b">Consulta, califica y deja reseñas</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#reseña">Reseña</a></li>
+                    <li><a href="#registro">Registro</a></li>
+                </ul>
+            </nav>
+            <div class="search-and-profile">
+                <div class="searchbar">
+                    <input type="search" placeholder="Búsqueda">
+                </div>
+                <a href="#perfil" class="profile-btn">Perfil</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="carousel-container">
+                <div class="carousel-track">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/1/800/600" alt="Póster de la película 1">
+                        <div class="body">
+                            <h3>La Aventura Final</h3>
+                            <p>Una película de acción que te dejará sin aliento.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/2/800/600" alt="Póster de la película 2">
+                        <div class="body">
+                            <h3>Noche en el Museo</h3>
+                            <p>Una divertida comedia para toda la familia.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/3/800/600" alt="Póster de la película 3">
+                        <div class="body">
+                            <h3>El Misterio del Bosque</h3>
+                            <p>Una película de suspenso que te mantendrá al borde de tu asiento.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/4/800/600" alt="Póster de la película 4">
+                        <div class="body">
+                            <h3>Romance en París</h3>
+                            <p>Una historia de amor ambientada en la ciudad del amor.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/5/800/600" alt="Póster de la película 5">
+                        <div class="body">
+                            <h3>Ciencia en la Luna</h3>
+                            <p>Un viaje al espacio exterior con un toque de ciencia ficción.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/6/800/600" alt="Póster de la película 6">
+                        <div class="body">
+                            <h3>El Regreso del Héroe</h3>
+                            <p>La secuela tan esperada de un clásico de superhéroes.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/7/800/600" alt="Póster de la película 7">
+                        <div class="body">
+                            <h3>Las Ruinas Perdidas</h3>
+                            <p>Una aventura épica en busca de tesoros antiguos.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/8/800/600" alt="Póster de la película 8">
+                        <div class="body">
+                            <h3>El Último Viaje</h3>
+                            <p>Un drama conmovedor sobre la vida y los sueños.</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Datos</p>
+            <p style="margin-top: 5px;">Pie de página</p>
+        </footer>
+    </div>
+
+    <script>
+        const carouselTrack = document.querySelector('.carousel-track');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const cards = document.querySelectorAll('.card');
+        
+        let currentIndex = 0;
+        const cardsPerPage = 4; // Número de tarjetas visibles a la vez
+
+        function updateCarousel() {
+            // El ancho de cada "slide" es el ancho total de las tarjetas visibles
+            // incluyendo los márgenes/gaps entre ellas.
+            // Para calcularlo correctamente:
+            // 1. Obtener el ancho real de una tarjeta (incluyendo sus márgenes)
+            const cardComputedStyle = window.getComputedStyle(cards[0]);
+            const cardMarginLeft = parseFloat(cardComputedStyle.marginLeft);
+            const cardMarginRight = parseFloat(cardComputedStyle.marginRight);
+            const totalCardWidth = cards[0].offsetWidth + cardMarginLeft + cardMarginRight;
+
+            // 2. Multiplicar por el número de tarjetas que queremos mostrar por "slide"
+            const slideWidth = totalCardWidth * cardsPerPage;
+            
+            carouselTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            const totalSlides = Math.ceil(cards.length / cardsPerPage);
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Vuelve al inicio si llega al final
+            }
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            const totalSlides = Math.ceil(cards.length / cardsPerPage);
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - 1; // Vuelve al final si está en el inicio
+            }
+            updateCarousel();
+        });
+
+        // Asegurarse de que el carrusel se actualice correctamente cuando la ventana cambia de tamaño
+        window.addEventListener('resize', updateCarousel);
+        // Llamar a updateCarousel al cargar la página para la posición inicial
+        updateCarousel();
+    </script>
+</body>
+</html>

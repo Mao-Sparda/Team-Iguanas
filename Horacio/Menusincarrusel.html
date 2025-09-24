@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portal de Películas</title>
+    <style>
+        /* Estilos CSS del ejemplo proporcionado */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html,body { height:100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#0f172a; background:#f6f7fb; }
+        
+        .container { max-width:1100px; margin:28px auto; padding:18px; }
+
+        header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+        .brand { display:flex; gap:10px; align-items:center; }
+        .logo { width:44px; height:44px; border-radius:6px; background:linear-gradient(135deg,#ff5f6d,#ffc371); display:grid; place-items:center; color:#fff; font-weight:700; }
+        nav ul { list-style:none; display:flex; gap:10px; align-items:center; }
+        nav a { text-decoration:none; padding:8px 12px; border-radius:8px; color:#0f172a; font-weight:600; }
+        nav a:hover { background:#e8eef9; }
+
+        .searchbar { display:flex; gap:8px; align-items:center; }
+        .searchbar input[type="search"] { flex:1; padding:10px 12px; border-radius:8px; border:1px solid #dbe7ff; }
+        .searchbar a { text-decoration:none; padding:10px 14px; border-radius:8px; background:#2563eb; color:white; font-weight:600; }
+        .searchbar a:hover { opacity:0.95; }
+
+        .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:14px; margin-top:16px; }
+        .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(12,14,20,0.04); display:flex; flex-direction:column; }
+        .card img { width:100%; height:300px; object-fit:cover; }
+        .card .body { padding:10px 12px; display:flex; flex-direction:column; gap:8px; flex:1; }
+        .card h3 { font-size:16px; }
+        .card p { font-size:13px; color:#475569; flex:1; }
+        .card .meta { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:8px; }
+        
+        footer { margin-top:18px; text-align:center; color:#475569; font-size:13px; }
+
+        /* Estilos adicionales para la sección de 'Datos' */
+        .seccion-datos {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(12,14,20,0.04);
+            margin-top: 18px;
+        }
+
+        /* Responsive menor */
+        @media (max-width:640px) {
+            .hero { padding:14px; }
+            .card img { height:200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">PM</div>
+                <div>
+                    <div style="font-weight:700">Portal de Películas</div>
+                    <div style="font-size:12px;color:#64748b">Consulta, califica y deja reseñas</div>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#reseña">Reseña</a></li>
+                    <li><a href="#registro">Registro</a></li>
+                    <li><a href="#perfil">Perfil</a></li>
+                </ul>
+            </nav>
+
+            <div class="searchbar">
+                <input type="search" placeholder="Búsqueda">
+                <a href="#">Buscar</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="grid" id="galeria-peliculas">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/1/800/600" alt="Póster de la película 1">
+                    <div class="body">
+                        <h3>Título Película 1</h3>
+                        <p>Breve descripción de la película.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/2/800/600" alt="Póster de la película 2">
+                    <div class="body">
+                        <h3>Título Película 2</h3>
+                        <p>Breve descripción de la película.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/3/800/600" alt="Póster de la película 3">
+                    <div class="body">
+                        <h3>Título Película 3</h3>
+                        <p>Breve descripción de la película.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/4/800/600" alt="Póster de la película 4">
+                    <div class="body">
+                        <h3>Título Película 4</h3>
+                        <p>Breve descripción de la película.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/5/800/600" alt="Póster de la película 5">
+                    <div class="body">
+                        <h3>Título Película 5</h3>
+                        <p>Breve descripción de la película.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/6/800/600" alt="Póster de la película 6">
+                    <div class="body">
+                        <h3>Título Película 6</h3>
+                        <p>Breve descripción de la película.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+            <footer class="seccion-datos">
+                <h2>Datos</h2>
+                <p>Aqui habra datos ramdom que creeremos que son relevantes.</p>
+            </footer> 
+    </div>
+</body>
+</html>
