@@ -1,22 +1,38 @@
-# Team-Iguanas
-Iguano power
- <!DOCTYPE html>
-<html>
-<head>
-  <h1>Hola Mundo</h1>
-</head>
-<body>
-  <h1>
-    YOYOYOYOYO MR WHITE YOOOOOO BEAAAAACH
-  </h1>
-  <h1>
-    Ya llego por quien lloraban
-  </h1>
-  <h1>
-    valeria es una llorona, de todo se queja pero nunca hace nada, se hace la vistima
-  </h1>
-  <h1>
-    TEAM CHICHOTAS ASI DE GRANDES PETTER MAGUMBOS GRADNOTAS MIJO UBRES BIEN POTENTES QUE ME AHOGENNNN
-  </h1>
-</body>
-</html>
+# 🎬 [Nombre del Proyecto]
+
+## Descripción del Proyecto
+[Agrega aquí una descripción clara de lo que hace el proyecto cuando tengas definido el concepto. Por ejemplo: Es una plataforma web para consultar información y reseñas de películas, desarrollada como proyecto final para la materia de Desarrollo Rápido de Aplicaciones.]
+
+---
+
+## ✨ Características Principales
+* Búsqueda de películas por título.
+* Visualización de detalles de cada película (sinopsis, director, año).
+* Sección de reseñas de la comunidad.
+* Diseño responsivo para computadoras y dispositivos móviles.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+* HTML5
+* CSS3
+* JavaScript
+
+---
+
+## 👨‍💻 Equipo de Desarrollo (Team Iguanas)
+
+Este proyecto fue creado por los siguientes estudiantes:
+
+* Kevin Josef Huerta Moreno
+* Carlos Alejandro Acosta Méndez
+* Valeria De Los Ángeles Cruz May
+* Rubén Horacio Machuca Santos
+
+---
+
+## 📚 Información Académica
+
+* **Institución:** Universidad Autónoma del Carmen
+* **Materia:** Desarrollo Rápido de Aplicaciones
+* **Profesor:** Jesús Alejandro Flores Hernández
