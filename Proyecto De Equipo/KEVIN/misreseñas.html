@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Reseñas</title>
+  <link rel="stylesheet" href="misreseñas.css" />
+</head>
+<body>
+  <!-- HEADER con el mismo look de la principal -->
+  <header class="topbar">
+    <div class="wrap">
+      <h1 class="logo">Mis Reseñas</h1>
+      <nav class="nav">
+        <a href="../CARLOS/mainpage.html">Películas</a>
+        <a class="active" href="./misreseñas.html">Mis Reseñas</a>
+        <a href="#" title="Pendiente">Registro</a>
+        <a href="#" title="Pendiente">Perfil</a>
+      </nav>
+      <form class="search" onsubmit="event.preventDefault();">
+        <input type="search" placeholder="Buscar..." />
+        <button type="submit">Búsqueda</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- SECCIÓN PERFIL (avatar + nombre) -->
+    <section class="profile card">
+      <div class="profile-left">
+        <div class="avatar">
+          <img id="avatar" src="./img/default-avatar.png" alt="Foto de usuario" />
+        </div>
+        <div class="avatar-actions">
+          <input id="fotoInput" type="file" accept="image/*">
+          <button id="btnGuardarFoto" type="button">Guardar foto</button>
+          <button id="btnRestablecerFoto" type="button">Restablecer</button>
+        </div>
+      </div>
+      <div class="profile-right">
+        <h2 id="nombreUsuario">Nombre del Usuario</h2>
+        <p class="muted">Aquí verás todas las reseñas que has publicado.</p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO NUEVA RESEÑA -->
+    <section class="card">
+      <h2 class="section-title">Escribir nueva reseña</h2>
+      <form id="formResena" class="form">
+        <label class="field">
+          <span>Película</span>
+          <input id="tituloPelicula" type="text" placeholder="Ej. El Viaje de los Sueños" required />
+        </label>
+
+        <label class="field">
+          <span>Mi reseña</span>
+          <textarea id="textoResena" rows="4" placeholder="¿Qué te pareció?" required></textarea>
+        </label>
+
+        <label class="field">
+          <span>Calificación</span>
+          <select id="calificacion" required>
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+          </select>
+        </label>
+
+        <button class="btn primary" type="submit">Guardar reseña</button>
+      </form>
+    </section>
+
+    <!-- LISTA DE RESEÑAS -->
+    <section class="card">
+      <h2 class="section-title">Mis Reseñas Publicadas</h2>
+      <div id="listaResenas" class="list"><!-- Se pinta por JS --></div>
+    </section>
+  </main>
+
+  <!-- FOOTER tipo barra negra -->
+  <footer class="footer">
+    <div class="wrap">
+      <span>Datos | Pie de página © 2025</span>
+    </div>
+  </footer>
+
+  <!-- Botón volver flotante -->
+  <a class="btn-back" href="../CARLOS/mainpage.html" title="Volver a principal">⟵ Volver</a>
+
+  <script>
+    // Evitar que los links pendientes recarguen
+    document.querySelectorAll('a[href="#"]').forEach(a =>
+      a.addEventListener('click', e => e.preventDefault())
+    );
+  </script>
+  <script src="misreseñas.js"></script>
+</body>
+</html>
