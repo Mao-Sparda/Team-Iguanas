@@ -1,7 +1,8 @@
-# 🎬 [Nombre del Proyecto]
+# 🎬 [Nombre del Proyecto] - pongan el nombre aqui chavales
+
 
 ## Descripción del Proyecto
-[Agrega aquí una descripción clara de lo que hace el proyecto cuando tengas definido el concepto. Por ejemplo: Es una plataforma web para consultar información y reseñas de películas, desarrollada como proyecto final para la materia de Desarrollo Rápido de Aplicaciones.]
+[Agrega aquí una descripción]
 
 ---
 
