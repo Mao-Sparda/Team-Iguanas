@@ -1,4 +1,4 @@
-# 🎬 [Nombre del Proyecto] - pongan el nombre aqui chavales
+# 🎬 CineCritics
 
 
 ## Descripción del Proyecto
