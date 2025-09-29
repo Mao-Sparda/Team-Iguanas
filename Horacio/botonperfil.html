@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Estilos para la foto de perfil */
+    .foto-perfil {
+      max-width: 80px;    /* no puede superar este ancho */
+      max-height: 80px;   /* no puede superar esta altura */
+      width: 80px;        /* forzamos el ancho exacto */
+      height: 80px;       /* forzamos la altura exacta */
+      object-fit: cover;  /* recorta para que no se deforme */
+      border-radius: 50%; /* la hace circular */
+      display: block;     /* evita que el navegador la expanda raro */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header class="w3-bar w3-black w3-padding">
+    <span class="w3-bar-item w3-xlarge">Nombre de nuestra pagina</span>
+    <a href="Peliculas.html" class="w3-bar-item w3-button w3-hover-light-grey">Películas</a>
+    <a href="resena.html" class="w3-bar-item w3-button w3-hover-light-grey">Reseña</a>
+    <a href="registro.html" class="w3-bar-item w3-button w3-hover-light-grey">Registro</a>
+    <a href="botonperfil.html" class="w3-bar-item w3-button w3-hover-light-grey">Perfil</a>
+    <div class="w3-bar-item w3-right">
+      <input class="w3-input w3-border" type="text" placeholder="Buscar...">
+      <button class="w3-button w3-grey w3-margin-top">Búsqueda</button>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="w3-container w3-margin-top">
+
+    <!-- Perfil del usuario -->
+    <section class="w3-card w3-padding w3-round-large w3-white w3-center">
+      <h2>Perfil del Usuario</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIw5-P0kOn8EzoNT51WwNRPTt-af_d1OA-KQ&s"
+           alt="Foto de perfil" 
+           class="w3-circle w3-image w3-margin">
+      <h3>Macy</h3>
+      <p><strong>Email:</strong> 123456@mail.unacar.mx</p>
+      <p><strong>Miembro desde:</strong> Enero 2025</p>
+      <p><strong>Preferencias:</strong> Drama, Ciencia Ficción, Acción</p>
+    </section>
+s
+    <!-- Reseñas del usuario -->
+    <section class="w3-card w3-padding w3-round-large w3-margin-top">
+      <h3>Mis Reseñas</h3>
+
+      <div class="w3-panel w3-light-grey w3-border w3-round-large w3-margin-bottom">
+        <p><strong>Película:</strong> El Viaje de los Sueños</p>
+        <p><strong>Calificación:</strong> ★★★★☆</p>
+        <p>"Una película muy inspiradora, la volvería a ver sin duda."</p>
+      </div>
+
+      <div class="w3-panel w3-light-grey w3-border w3-round-large w3-margin-bottom">
+        <p><strong>Película:</strong> Sombras del Pasado</p>
+        <p><strong>Calificación:</strong> ★★★☆☆</p>
+        <p>"Interesante, aunque el final no cumplió mis expectativas."</p>
+      </div>
+
+      <div class="w3-panel w3-light-grey w3-border w3-round-large">
+        <p><strong>Película:</strong> Amanecer Infinito</p>
+        <p><strong>Calificación:</strong> ★★★★★</p>
+        <p>"Una de las mejores experiencias en cine que he tenido."</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="w3-container w3-black w3-padding w3-margin-top">
+    <p>Datos | Pie de página © 2025</p>
+  </footer>
+
+</body>
+</html>
