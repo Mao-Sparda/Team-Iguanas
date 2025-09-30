@@ -6,6 +6,7 @@ El proyecto consiste en el desarrollo de un portal web para reseñas de películ
 
 ---
 NOTION
+---
 https://www.notion.so/Proyecto-RAD-25f07d97cdbf806f8922e08369cb3225?source=copy_link
 ---
 
