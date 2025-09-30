@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles - Comunidad Cinéfila</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="w3-bar w3-black w3-padding">
+    <span class="w3-bar-item w3-xlarge">Ventana Principal</span>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Películas</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Reseña</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Registro</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Perfil</a>
+    <div class="w3-bar-item w3-right">
+      <input class="w3-input w3-border" type="text" placeholder="Buscar...">
+      <button class="w3-button w3-grey w3-margin-top">Búsqueda</button>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="w3-row-padding w3-margin-top">
+
+    <!-- Panel izquierdo: Póster sin botón Detalles -->
+    <section class="w3-third">
+      <div class="w3-card w3-padding">
+        <h3 class="w3-center">Película Destacada del Mes</h3>
+        <img src="img/poster_pelicula.jpg" 
+             alt="Poster de la película" class="w3-image w3-margin-bottom" style="display: block; width:200px; height:auto; margin: 0 auto;">
+        <div class="w3-center">
+          <button class="w3-button w3-blue">Calificar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel derecho: Detalles de la película -->
+    <section class="w3-twothird">
+      <div class="w3-card w3-padding">
+        <h3>Detalles de la Película</h3>
+
+        <!-- Principal -->
+        <div class="w3-panel w3-light-grey w3-round-large w3-padding">
+          <h4>Principal</h4>
+          <p><strong>Título original:</strong> El Viaje de los Sueños</p>
+          <p><strong>Año de estreno:</strong> 2024</p>
+          <p><strong>Duración:</strong> 125 minutos</p>
+          <p><strong>País de origen:</strong> México</p>
+          <p><strong>Idioma original:</strong> Español</p>
+          <p><strong>Clasificación por edad:</strong> PG-13</p>
+        </div>
+
+        <!-- Equipo creativo -->
+        <div class="w3-panel w3-light-grey w3-round-large w3-padding">
+          <h4>Equipo creativo</h4>
+          <p><strong>Director:</strong> Ana Torres</p>
+          <p><strong>Guionista(s):</strong> Luis Martínez, Carla Pérez</p>
+          <p><strong>Actores:</strong> Jorge Ramírez, Sofía López, Diego Hernández</p>
+        </div>
+
+        <!-- Sinopsis -->
+        <div class="w3-panel w3-light-grey w3-round-large w3-padding">
+          <h4>Sinopsis</h4>
+          <p>
+            Un joven soñador emprende un viaje para descubrir el verdadero significado de sus sueños,
+            enfrentándose a desafíos que lo llevarán a reflexionar sobre la vida, el amor y el destino.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="w3-container w3-black w3-padding w3-margin-top">
+    <p>Datos | Pie de página © 2025</p>
+  </footer>
+
+  <script src="detalles.js"></script>
+</body>
+</html>
