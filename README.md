@@ -5,6 +5,9 @@
 El proyecto consiste en el desarrollo de un portal web para reseñas de películas, donde los usuarios podrán consultar información de distintas películas, calificarlas y dejar sus propias reseñas.
 
 ---
+NOTION
+https://www.notion.so/Proyecto-RAD-25f07d97cdbf806f8922e08369cb3225?source=copy_link
+---
 
 ## ✨ Características Principales
 * Búsqueda de películas por título.
