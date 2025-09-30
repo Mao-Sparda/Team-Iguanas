@@ -2,7 +2,7 @@
 
 
 ## Descripción del Proyecto
-[Agrega aquí una descripción]
+El proyecto consiste en el desarrollo de un portal web para reseñas de películas, donde los usuarios podrán consultar información de distintas películas, calificarlas y dejar sus propias reseñas.
 
 ---
 
