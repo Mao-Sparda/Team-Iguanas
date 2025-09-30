@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Comunidad Cinéfila</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* CSS personalizado */
+    #preview {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="w3-bar w3-black w3-padding">
+    <span class="w3-bar-item w3-xlarge">Ventana Principal</span>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Películas</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Reseña</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Registro</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-light-grey">Perfil</a>
+    <div class="w3-bar-item w3-right">
+      <input class="w3-input w3-border" type="text" placeholder="Buscar...">
+      <button class="w3-button w3-grey w3-margin-top">Búsqueda</button>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <div class="w3-container w3-padding-32" style="max-width:600px; margin:auto;">
+    <h2 class="w3-center">Registro</h2>
+    
+    <form id="registroForm" class="w3-container w3-card w3-light-grey w3-padding">
+      
+      <label class="w3-text-black"><b>Nombre de usuario</b></label>
+      <input class="w3-input w3-border" type="text" id="usuario">
+      <p class="w3-small w3-text-red">No uses tu nombre real</p>
+
+      <label class="w3-text-black"><b>Correo electrónico</b></label>
+      <input class="w3-input w3-border" type="email" id="correo">
+
+      <label class="w3-text-black"><b>Contraseña</b></label>
+      <input class="w3-input w3-border" type="password" id="password">
+
+      <label class="w3-text-black"><b>Foto de perfil</b></label>
+      <div class="w3-row">
+        <div class="w3-col s9">
+          <input type="file" id="foto" hidden>
+        </div>
+        <div class="w3-col s3 w3-center">
+          <button type="button" class="w3-button w3-blue" onclick="document.getElementById('foto').click()">Añadir foto</button>
+        </div>
+      </div>
+      <div class="w3-center w3-margin-top">
+        <img id="preview" class="w3-circle w3-image">
+      </div>
+
+      <label class="w3-text-black"><b>País o región</b></label>
+      <select class="w3-select w3-border" id="pais">
+        <option value="" disabled selected>Selecciona un país</option>
+        <option>México</option>
+        <option>Estados Unidos</option>
+        <option>Canadá</option>
+        <option>Brasil</option>
+        <option>Argentina</option>
+        <option>España</option>
+        <option>Reino Unido</option>
+        <option>Francia</option>
+        <option>Alemania</option>
+        <option>Japón</option>
+      </select>
+
+      <label class="w3-text-black"><b>Fecha de nacimiento</b></label>
+      <input class="w3-input w3-border" type="date" id="fecha">
+
+      <div class="w3-center w3-margin-top">
+        <button type="button" class="w3-button w3-green" onclick="finalizarRegistro()">Finalizar Registro</button>
+      </div>
+    </form>
+
+    <p id="mensaje" class="w3-center w3-margin-top"></p>
+  </div>
+
+  <script src="registro.js"></script>
+</body>
+</html>
