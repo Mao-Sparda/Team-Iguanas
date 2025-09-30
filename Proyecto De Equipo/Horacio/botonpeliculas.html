@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CineCritics</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <style>
+    /* Ajustes específicos al carrusel dentro de W3 */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .card {
+      flex: 0 0 calc(25% - 14px);
+      margin: 0 7px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card .body {
+      padding: 10px;
+      flex-grow: 1;
+    }
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 13px;
+      color: #475569;
+      margin: 2px 0;
+    }
+    .card .w3-button {
+      margin-top: 8px;
+      width: 100%;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .carousel-button.prev { left: 5px; }
+    .carousel-button.next { right: 5px; }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header class="w3-bar w3-black w3-padding">
+    <span class="w3-bar-item w3-xlarge">CineCritics</span>
+    <a href="botonpeliculas.html" class="w3-bar-item w3-button w3-hover-light-grey">Películas</a>
+    <a href="#reseñas" class="w3-bar-item w3-button w3-hover-light-grey">Reseñas</a>
+    <a href="#registro" class="w3-bar-item w3-button w3-hover-light-grey">Registro</a>
+    <a href="botonperfil.html" class="w3-bar-item w3-button w3-hover-light-grey">Perfil</a>
+    <div class="w3-bar-item w3-right">
+      <input class="w3-input w3-border" type="text" placeholder="Buscar...">
+      <button class="w3-button w3-grey w3-margin-top">Búsqueda</button>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="w3-row-padding w3-margin-top">
+
+    <!-- Carrusel de películas -->
+    <section class="w3-col" id="peliculas">
+      <div class="w3-card w3-padding">
+        <h3 class="w3-center">Películas en Cartelera</h3>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            
+            <article class="card">
+              <img src="https://picsum.photos/seed/1/800/600" alt="Póster 1">
+              <div class="body">
+                <h3>La Aventura Final</h3>
+                <p><strong>Género:</strong> Acción / Aventura</p>
+                <p><strong>Calificación:</strong> ★★★★☆</p>
+                <p>Acción trepidante que te dejará sin aliento.</p>
+                <a href="detalles.html" class="w3-button w3-blue">Detalles</a>
+                <a href="reviewmovie.html" class="w3-button w3-blue">Calificar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://picsum.photos/seed/2/800/600" alt="Póster 2">
+              <div class="body">
+                <h3>Noche en el Museo</h3>
+                <p><strong>Género:</strong> Comedia</p>
+                <p><strong>Calificación:</strong> ★★★★☆</p>
+                <p>Comedia familiar llena de diversión y aventuras.</p>
+                <a href="detalles.html" class="w3-button w3-blue">Detalles</a>
+                <a href="reviewmovie.html" class="w3-button w3-blue">Calificar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://picsum.photos/seed/3/800/600" alt="Póster 3">
+              <div class="body">
+                <h3>El Misterio del Bosque</h3>
+                <p><strong>Género:</strong> Suspenso</p>
+                <p><strong>Calificación:</strong> ★★★★★</p>
+                <p>Suspenso que te mantendrá expectante hasta el final.</p>
+                <a href="detalles.html" class="w3-button w3-blue">Detalles</a>
+                <a href="reviewmovie.html" class="w3-button w3-blue">Calificar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://picsum.photos/seed/4/800/600" alt="Póster 4">
+              <div class="body">
+                <h3>Romance en París</h3>
+                <p><strong>Género:</strong> Romance</p>
+                <p><strong>Calificación:</strong> ★★★★☆</p>
+                <p>Una historia de amor en la ciudad de la luz.</p>
+                <a href="detalles.html" class="w3-button w3-blue">Detalles</a>
+                <a href="reviewmovie.html" class="w3-button w3-blue">Calificar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://picsum.photos/seed/5/800/600" alt="Póster 5">
+              <div class="body">
+                <h3>Ciencia en la Luna</h3>
+                <p><strong>Género:</strong> Ciencia Ficción</p>
+                <p><strong>Calificación:</strong> ★★★☆☆</p>
+                <p>Viaje al espacio con un toque de ciencia y misterio.</p>
+                <a href="detalles.html" class="w3-button w3-blue">Detalles</a>
+                <a href="reviewmovie.html" class="w3-button w3-blue">Calificar</a>
+              </div>
+            </article>
+
+          </div>
+          <button class="carousel-button prev">&#10094;</button>
+          <button class="carousel-button next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="w3-container w3-black w3-padding w3-margin-top">
+    <p>Datos | CineCritics © 2025</p>
+  </footer>
+
+  <!-- JS del carrusel -->
+  <script>
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    const cards = document.querySelectorAll('.card');
+
+    let currentIndex = 0;
+    const cardsPerPage = 2; // Ajuste para encajar con el ancho en W3.css
+
+    function updateCarousel() {
+      const cardStyle = window.getComputedStyle(cards[0]);
+      const margin = parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
+      const cardWidth = cards[0].offsetWidth + margin;
+      const slideWidth = cardWidth * cardsPerPage;
+      carouselTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+      const totalSlides = Math.ceil(cards.length / cardsPerPage);
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+      const totalSlides = Math.ceil(cards.length / cardsPerPage);
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  </script>
+</body>
+</html>
