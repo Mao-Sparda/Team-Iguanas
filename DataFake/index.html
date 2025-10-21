@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de JSONPlaceholder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/sidebar.js"></script>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+    <div class="flex">
+        <custom-sidebar></custom-sidebar>
+        <main class="flex-1 p-6">
+            <div id="dashboard" class="container mx-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-2xl font-bold text-gray-800">Panel de Control</h1>
+                    <div class="relative">
+                        <input type="text" id="globalSearch" placeholder="Buscar en todos los datos..." 
+class="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i data-feather="search" class="absolute left-3 top-2.5 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Users Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="users" class="text-blue-500 mr-3"></i>
+                            <h2 class="text-xl font-semibold">Usuarios</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestiona todos los usuarios desde la API JSONPlaceholder</p>
+                        <button onclick="loadUsers()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center">
+                            <i data-feather="eye" class="mr-2"></i> Ver Usuarios
+                        </button>
+                    </div>
+
+                    <!-- Posts Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="file-text" class="text-green-500 mr-3"></i>
+                            <h2 class="text-xl font-semibold">Publicaciones</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestiona todas las publicaciones desde la API JSONPlaceholder</p>
+                        <button onclick="loadAllPosts()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center">
+                            <i data-feather="eye" class="mr-2"></i> Ver Publicaciones
+                        </button>
+                    </div>
+
+                    <!-- Comments Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="message-square" class="text-purple-500 mr-3"></i>
+                            <h2 class="text-xl font-semibold">Comentarios</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestiona todos los comentarios desde la API JSONPlaceholder</p>
+                        <button onclick="loadAllComments()" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg flex items-center">
+                            <i data-feather="eye" class="mr-2"></i> Ver Comentarios
+                        </button>
+                    </div>
+                </div>
+
+                <div id="dataContainer" class="mt-8"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
