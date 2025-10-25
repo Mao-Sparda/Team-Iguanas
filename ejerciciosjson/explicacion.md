@@ -1,5 +1,13 @@
 # Tarea: Ejercicios con JSON
 
+Equipo:
+CARLOS ALEJANDRO ACOSTA MENDEZ
+RUBEN HORACIO MACHUCA SANTOS
+VALERIA DE LOS ANGELES CRUZ MAY 
+KEVIN JOSEFP HUERTA MORENO
+
+
+
 ## Descripción
 Se generó un conjunto de 200 datos usando [Mockaroo](https://www.mockaroo.com/).  
 
